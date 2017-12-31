@@ -5,17 +5,43 @@
         <th>query</th>
         <th>created by</th>
         <th>finished</th>
-        <th>edit</th>
+
+        <th>vaju</th>
+        <th>nithin</th>
+        <th>local</th>
+        <th>staging</th>
+        <th>production</th>
+
     </thead>
     <tbody>
         <tr *ngFor="let query of queries; let i = index">
             <td>{{query.id}}</td>
-            <td>{{query.query}}</td>
+            <!-- <td>{{query.query}}</td> -->
+            <td>
+                <div class="query-title">
+                    <strong>{{query.title}}</strong>
+                </div>
+                <div class="query-string" (click)="onEditClick(query, i)">
+                    <code>{{query.query}}</code>
+                </div>
+            </td>
             <td>{{query.created_by}}</td>
             <td>
                 <input type="checkbox" [(ngModel)]="query.finished" (change)="updateFinished(query)">
             </td>
-            <td (click)="onEditClick(query, i)">edit</td>
+
+            <!-- vaju -->
+            <td>
+                <input type="checkbox" [(ngModel)]="query.ready_for_vajahath" (change)="updateFinished(query)"> {{query.vajahath_status}}
+            </td>
+            <!-- nithin -->
+            <td>
+                <input type="checkbox" [(ngModel)]="query.ready_for_nithin" (change)="updateFinished(query)"> {{query.nithin_status}}
+            </td>
+            <!-- vaju -->
+            <td>
+                <input type="checkbox" [(ngModel)]="query.ready_for_local" (change)="updateFinished(query)"> {{query.local_status}}
+            </td>
         </tr>
     </tbody>
 </table>

@@ -4,11 +4,9 @@
             <h3>Edit Query</h3>
             <p>id: {{selectedQuery.id}}
                 <br> created by: {{selectedQuery.created_by}}</p>
-            <textarea [(ngModel)]="selectedQuery.query" name="query" id="query" cols="100" rows="10"></textarea>
+            <textarea [(ngModel)]="selectedQuery.query" name="query" id="query" cols="80" rows="10"></textarea>
             <br>
             <button (click)="updateQuery()">update</button>
         </div>
     </div>
-    <h1>Editor</h1>
-    <button>open modal</button>
 </div>

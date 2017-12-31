@@ -1,3 +1,8 @@
 {
     "prettier.eslintIntegration": false,
+    "cSpell.words": [
+        "nithin",
+        "nithins",
+        "vajahaths"
+    ],
 }

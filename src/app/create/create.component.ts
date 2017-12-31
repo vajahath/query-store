@@ -7,7 +7,7 @@ import { Query } from '../Query.class';
   styleUrls: ['./create.component.css']
 })
 export class AppCreateComponent implements OnInit {
-  query: Query = {
+  query = {
     id: 1,
     created_by: 'me',
     query: 'some query',
