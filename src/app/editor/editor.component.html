@@ -1,12 +1,12 @@
 <div *ngIf="selectedQuery">
-    <div class="modal" [style.display]="displayEditorModal?'block':'none'">
+    <div class="modal">
         <div class="modal-content">
             <h3>Edit Query</h3>
-            <p>id: {{query.id}}
-                <br> created by: {{query.created_by}}</p>
-            <textarea name="query" id="query" cols="100" rows="10">{{query.query}}</textarea>
+            <p>id: {{selectedQuery.id}}
+                <br> created by: {{selectedQuery.created_by}}</p>
+            <textarea [(ngModel)]="selectedQuery.query" name="query" id="query" cols="100" rows="10"></textarea>
             <br>
-            <button>update</button>
+            <button (click)="updateQuery()">update</button>
         </div>
     </div>
     <h1>Editor</h1>

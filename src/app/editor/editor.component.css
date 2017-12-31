@@ -1,9 +1,6 @@
-.red {
-  color: red;
-}
 /* The Modal (background) */
 .modal {
-  display: none; /* hidden by default */
+  display: block; /* hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;

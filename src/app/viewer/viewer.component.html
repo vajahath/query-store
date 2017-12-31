@@ -7,12 +7,12 @@
         <th>edit</th>
     </thead>
     <tbody>
-        <tr *ngFor="let query of queries">
+        <tr *ngFor="let query of queries; let i = index">
             <td>{{query.id}}</td>
             <td>{{query.query}}</td>
             <td>{{query.created_by}}</td>
-            <td (click)="onSelect(query)">edit</td>
+            <td (click)="onEditClick(query, i)">edit</td>
         </tr>
     </tbody>
 </table>
-<app-editor [(selectedQuery)]="selectedQuery"></app-editor>
+<app-editor [selectedQuery]="selectedQueryCopy" (edited)="onEditedResponse($event)"></app-editor>

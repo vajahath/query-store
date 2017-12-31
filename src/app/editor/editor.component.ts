@@ -1,5 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 import { Query } from '../Query.class';
+
+export class EditorComponentResponse extends Query {
+  success: boolean;
+}
 
 @Component({
   selector: 'app-editor',
@@ -8,13 +13,23 @@ import { Query } from '../Query.class';
 })
 export class AppEditorComponent implements OnInit {
   @Input() selectedQuery: Query;
-  displayEditorModal = true;
+  @Output() edited = new EventEmitter<EditorComponentResponse>();
 
-  query: Query = {
-    id: 8,
-    created_by: 'ma0',
-    query: 'some query'
-  };
   constructor() {}
   ngOnInit() {}
+
+  // update operation
+  updateQuery() {
+    console.log('updated data', this.selectedQuery);
+    // http req - on success
+    this.edited.emit(
+      Object.assign(
+        {
+          success: true
+        },
+        this.selectedQuery
+      )
+    );
+    this.selectedQuery = null;
+  }
 }
