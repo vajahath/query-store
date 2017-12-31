@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Query } from '../Query.class';
 
 @Component({
@@ -7,12 +7,14 @@ import { Query } from '../Query.class';
   styleUrls: ['./editor.component.css']
 })
 export class AppEditorComponent implements OnInit {
+  @Input() selectedQuery: Query;
+  displayEditorModal = true;
+
   query: Query = {
-    id: 1,
-    created_by: 'me',
+    id: 8,
+    created_by: 'ma0',
     query: 'some query'
   };
-
   constructor() {}
   ngOnInit() {}
 }

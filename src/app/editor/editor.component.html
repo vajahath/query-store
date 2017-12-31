@@ -1,14 +1,14 @@
-<div class="editor">
-    <div class="left">
-        <textarea name="query" id="edit-query" cols="60" rows="10">{{query.query}}</textarea>
+<div *ngIf="selectedQuery">
+    <div class="modal" [style.display]="displayEditorModal?'block':'none'">
+        <div class="modal-content">
+            <h3>Edit Query</h3>
+            <p>id: {{query.id}}
+                <br> created by: {{query.created_by}}</p>
+            <textarea name="query" id="query" cols="100" rows="10">{{query.query}}</textarea>
+            <br>
+            <button>update</button>
+        </div>
     </div>
-    <div class="right">
-        <p>
-            id: {{query.id}}
-            <br> created by: {{query.created_by}}
-        </p>
-        <input type="checkbox" name="finished" id="finished">
-        <label for="finished">Finished?</label>
-        <button>submit</button>
-    </div>
+    <h1>Editor</h1>
+    <button>open modal</button>
 </div>

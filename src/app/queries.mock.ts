@@ -1,9 +1,9 @@
 import { Query } from './Query.class';
 
 export const QUERIES: Query[] = [
-  { id: 1, ran_in_local: true },
-  { id: 2, ran_in_local: true },
-  { id: 3, ran_in_local: false },
-  { id: 4, ran_in_local: true },
-  { id: 5, ran_in_local: false }
+  { id: 1, query: 'some query', created_by: 'blas' },
+  { id: 2, query: 'some query', created_by: 'blas' },
+  { id: 3, query: 'some query', created_by: 'blas' },
+  { id: 4, query: 'some query', created_by: 'blas' },
+  { id: 5, query: 'some query', created_by: 'blas' }
 ];

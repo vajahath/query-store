@@ -1,1 +1,18 @@
 <h3>Viewer</h3>
+<table>
+    <thead>
+        <th>id</th>
+        <th>query</th>
+        <th>created by</th>
+        <th>edit</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let query of queries">
+            <td>{{query.id}}</td>
+            <td>{{query.query}}</td>
+            <td>{{query.created_by}}</td>
+            <td (click)="onSelect(query)">edit</td>
+        </tr>
+    </tbody>
+</table>
+<app-editor [(selectedQuery)]="selectedQuery"></app-editor>
