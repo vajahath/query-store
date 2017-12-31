@@ -10,7 +10,8 @@ export class AppCreateComponent implements OnInit {
   query: Query = {
     id: 1,
     created_by: 'me',
-    query: 'some query'
+    query: 'some query',
+    finished: true
   };
 
   constructor() {}

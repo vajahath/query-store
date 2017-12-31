@@ -4,6 +4,7 @@
         <th>id</th>
         <th>query</th>
         <th>created by</th>
+        <th>finished</th>
         <th>edit</th>
     </thead>
     <tbody>
@@ -11,6 +12,9 @@
             <td>{{query.id}}</td>
             <td>{{query.query}}</td>
             <td>{{query.created_by}}</td>
+            <td>
+                <input type="checkbox" [(ngModel)]="query.finished" (change)="updateFinished(query)">
+            </td>
             <td (click)="onEditClick(query, i)">edit</td>
         </tr>
     </tbody>

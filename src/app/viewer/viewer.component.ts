@@ -35,4 +35,8 @@ export class AppViewerComponent implements OnInit {
       console.log(this.queries);
     }
   }
+
+  updateFinished(query: Query) {
+    console.log('updates finished', query);
+  }
 }

@@ -20,7 +20,6 @@ export class AppEditorComponent implements OnInit {
 
   // update operation
   updateQuery() {
-    console.log('updated data', this.selectedQuery);
     // http req - on success
     this.edited.emit(
       Object.assign(
