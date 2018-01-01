@@ -24,4 +24,10 @@ th {
   padding: 5px;
   background-color: white;
   cursor: pointer;
+  overflow: auto;
+  max-height: 5em;
+  max-width: 40em;
+}
+code {
+  white-space: pre-line;
 }

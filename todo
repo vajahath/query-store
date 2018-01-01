@@ -1,7 +1,9 @@
-- [ ] trim large queries in viewer
+- [x] trim large queries in viewer
 - [x] add spinner
 - [ ] credential page
 - [ ] create-query component
 - [ ] failure case
 - [ ] pagination
+- [ ] cancel buttn in editor/esc to cancel/outside click to cancel
+- [ ] spinner in updater
 - [ ] ajax reqst
