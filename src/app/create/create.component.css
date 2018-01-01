@@ -1,0 +1,15 @@
+.create {
+  background-color: aliceblue;
+  padding: 10px;
+}
+.left {
+  display: inline-block;
+}
+/* .right {
+  display: inline-block;
+  position: absolute;
+  margin-left: 10px;
+} */
+.title-input {
+  width: 300px;
+}

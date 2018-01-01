@@ -1,14 +1,21 @@
-<div class="editor">
+<div class="create">
+    <h3>Add New Query</h3>
     <div class="left">
-        <textarea name="query" id="edit-query" cols="60" rows="10">{{query.query}}</textarea>
+        <input type="text" class="title-input" [(ngModel)]="title" placeholder="title for query*">
+        <br>
+        <br>
+        <textarea [(ngModel)]="query" placeholder="new query goes here*" id="edit-query" cols="100" rows="10"></textarea>
+        <br> created by: name
+        <br>
+        <br>
+        <input type="checkbox" [(ngModel)]="finished">
+        <label for="finished">I've finished creating this query</label>
+        <br>
+        <button (click)="submitQuery()">submit</button>
+        <paper-spinner-lite [active]="submissionInProgress"></paper-spinner-lite>
     </div>
     <div class="right">
         <p>
-            id: {{query.id}}
-            <br> created by: {{query.created_by}}
         </p>
-        <input type="checkbox" name="finished" id="finished">
-        <label for="finished">Finished?</label>
-        <button>submit</button>
     </div>
 </div>

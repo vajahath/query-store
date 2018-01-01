@@ -2,8 +2,10 @@
 - [x] add spinner
 - [x] cancel buttn in editor/esc to cancel
 - [x] spinner in updater
-- [ ] create-query component
+- [x] create-query component
+- [ ] delete query
 - [ ] failure case
 - [ ] pagination
 - [ ] credential page
 - [ ] ajax reqst
+- [ ] separate page for query
