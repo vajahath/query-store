@@ -1,3 +1,11 @@
+<!-- load paper-spinner -->
+
+<style is="custom-style">
+    paper-spinner,
+    paper-spinner-lite {
+        margin: 8px 8px 8px 0;
+    }
+</style>
 <h3>Viewer</h3>
 <table>
     <thead>
@@ -27,19 +35,24 @@
             </td>
             <td>{{query.created_by}}</td>
             <td>
+                <paper-spinner-lite active></paper-spinner-lite>
                 <input type="checkbox" [(ngModel)]="query.finished" (change)="updateFinished(query)">
+
             </td>
 
             <!-- vaju -->
             <td>
+                <paper-spinner-lite></paper-spinner-lite>
                 <input type="checkbox" [(ngModel)]="query.ready_for_vajahath" (change)="updateFinished(query)"> {{query.vajahath_status}}
             </td>
             <!-- nithin -->
             <td>
+                <paper-spinner-lite></paper-spinner-lite>
                 <input type="checkbox" [(ngModel)]="query.ready_for_nithin" (change)="updateFinished(query)"> {{query.nithin_status}}
             </td>
-            <!-- vaju -->
+            <!-- local -->
             <td>
+                <paper-spinner-lite></paper-spinner-lite>
                 <input type="checkbox" [(ngModel)]="query.ready_for_local" (change)="updateFinished(query)"> {{query.local_status}}
             </td>
         </tr>
