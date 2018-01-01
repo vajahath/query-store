@@ -1,4 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  HostListener
+} from '@angular/core';
 
 import { Query } from '../Query.class';
 
@@ -18,6 +25,13 @@ export class AppEditorComponent implements OnInit {
   constructor() {}
   ngOnInit() {}
 
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (this.selectedQuery && event.key === 'Escape') {
+      this.cancel();
+    }
+  }
+
   // update operation
   updateQuery() {
     // http req - on success
@@ -29,6 +43,10 @@ export class AppEditorComponent implements OnInit {
         this.selectedQuery
       )
     );
+    this.selectedQuery = null;
+  }
+  // cancel
+  cancel() {
     this.selectedQuery = null;
   }
 }
