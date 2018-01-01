@@ -1,0 +1,7 @@
+- [ ] trim large queries in viewer
+- [x] add spinner
+- [ ] credential page
+- [ ] create-query component
+- [ ] failure case
+- [ ] pagination
+- [ ] ajax reqst

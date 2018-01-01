@@ -1,3 +1,11 @@
+<!-- load paper-spinner -->
+
+<style is="custom-style">
+    paper-spinner,
+    paper-spinner-lite {
+        margin: 8px 8px 8px 0;
+    }
+</style>
 <h3>Viewer</h3>
 <table>
     <thead>
@@ -27,21 +35,45 @@
             </td>
             <td>{{query.created_by}}</td>
             <td>
-                <input type="checkbox" [(ngModel)]="query.finished" (change)="updateFinished(query)">
+                <paper-spinner-lite [active]="query.finishedInProgress"></paper-spinner-lite>
+                <input type="checkbox" [(ngModel)]="query.finished" (change)="updateCheckBox(i, query.id, 'finished', query.finished)" [disabled]="query.finishedInProgress">
             </td>
 
             <!-- vaju -->
             <td>
-                <input type="checkbox" [(ngModel)]="query.ready_for_vajahath" (change)="updateFinished(query)"> {{query.vajahath_status}}
+                <paper-spinner-lite [active]="query.ready_for_vajahathInProgress"></paper-spinner-lite>
+                <input type="checkbox" [(ngModel)]="query.ready_for_vajahath" (change)="updateCheckBox(i, query.id, 'ready_for_vajahath', query.ready_for_vajahath)"
+                    [disabled]="query.ready_for_vajahathInProgress"> {{query.vajahath_status}}
             </td>
+
             <!-- nithin -->
             <td>
-                <input type="checkbox" [(ngModel)]="query.ready_for_nithin" (change)="updateFinished(query)"> {{query.nithin_status}}
+                <paper-spinner-lite [active]="query.ready_for_nithinInProgress"></paper-spinner-lite>
+                <input type="checkbox" [(ngModel)]="query.ready_for_nithin" (change)="updateCheckBox(i, query.id, 'ready_for_nithin', query.ready_for_nithin)"
+                    [disabled]="query.ready_for_nithinInProgress"> {{query.nithin_status}}
             </td>
-            <!-- vaju -->
+
+            <!-- local -->
             <td>
-                <input type="checkbox" [(ngModel)]="query.ready_for_local" (change)="updateFinished(query)"> {{query.local_status}}
+                <paper-spinner-lite [active]="query.ready_for_localInProgress"></paper-spinner-lite>
+                <input type="checkbox" [(ngModel)]="query.ready_for_local" (change)="updateCheckBox(i, query.id, 'ready_for_local', query.ready_for_local)"
+                    [disabled]="query.ready_for_localInProgress"> {{query.local_status}}
             </td>
+
+            <!-- staging -->
+            <td>
+                <paper-spinner-lite [active]="query.ready_for_stagingInProgress"></paper-spinner-lite>
+                <input type="checkbox" [(ngModel)]="query.ready_for_staging" (change)="updateCheckBox(i, query.id, 'ready_for_staging', query.ready_for_staging)"
+                    [disabled]="query.ready_for_stagingInProgress"> {{query.staging_status}}
+            </td>
+
+            <!-- production -->
+            <td>
+                <paper-spinner-lite [active]="query.ready_for_productionInProgress"></paper-spinner-lite>
+                <input type="checkbox" [(ngModel)]="query.ready_for_production" (change)="updateCheckBox(i, query.id, 'ready_for_production', query.ready_for_production)"
+                    [disabled]="query.ready_for_productionInProgress"> {{query.production_status}}
+            </td>
+
         </tr>
     </tbody>
 </table>

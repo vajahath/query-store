@@ -36,7 +36,16 @@ export class AppViewerComponent implements OnInit {
     }
   }
 
-  updateFinished(query: Query) {
-    console.log('updates finished', query);
+  updateCheckBox(index: number, qId: number, property: string, value: boolean) {
+    if (this.queries[index][`${property}InProgress`]) {
+      return;
+    }
+    this.queries[index][`${property}InProgress`] = true;
+    console.log(
+      `pos ${index} with id ${qId} changed value of prop ${property} to ${value}`
+    );
+    setTimeout(() => {
+      this.queries[index][`${property}InProgress`] = false;
+    }, 5000);
   }
 }
