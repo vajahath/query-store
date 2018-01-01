@@ -3,6 +3,7 @@
 - [x] cancel buttn in editor/esc to cancel
 - [x] spinner in updater
 - [x] create-query component
+- [x] footer
 - [ ] delete query
 - [ ] failure case
 - [ ] pagination
