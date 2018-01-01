@@ -22,31 +22,43 @@ export class AppEditorComponent implements OnInit {
   @Input() selectedQuery: Query;
   @Output() edited = new EventEmitter<EditorComponentResponse>();
 
+  updateInProgress: boolean;
+
   constructor() {}
   ngOnInit() {}
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    if (this.selectedQuery && event.key === 'Escape') {
+    if (
+      this.selectedQuery &&
+      event.key === 'Escape' &&
+      !this.updateInProgress
+    ) {
       this.cancel();
     }
   }
 
   // update operation
   updateQuery() {
-    // http req - on success
-    this.edited.emit(
-      Object.assign(
-        {
-          success: true
-        },
-        this.selectedQuery
-      )
-    );
-    this.selectedQuery = null;
+    this.updateInProgress = true;
+    setTimeout(() => {
+      // http req - on success
+      this.edited.emit(
+        Object.assign(
+          {
+            success: true
+          },
+          this.selectedQuery
+        )
+      );
+      this.updateInProgress = false;
+      this.selectedQuery = null;
+    }, 2000);
   }
   // cancel
   cancel() {
-    this.selectedQuery = null;
+    if (!this.updateInProgress) {
+      this.selectedQuery = null;
+    }
   }
 }

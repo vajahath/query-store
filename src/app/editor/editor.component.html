@@ -1,3 +1,9 @@
+<style is="custom-style">
+    paper-spinner,
+    paper-spinner-lite {
+        margin: 8px 8px 8px 0;
+    }
+</style>
 <div *ngIf="selectedQuery">
     <div class="modal">
         <div class="modal-content">
@@ -6,8 +12,9 @@
                 <br> created by: {{selectedQuery.created_by}}</p>
             <textarea [(ngModel)]="selectedQuery.query" name="query" id="query" cols="80" rows="10"></textarea>
             <br>
-            <button (click)="updateQuery()">update</button>
-            <button (click)="cancel()">cancel</button>
+            <button (click)="updateQuery()" [disabled]="updateInProgress">update</button>
+            <button (click)="cancel()" [disabled]="updateInProgress">cancel</button>
+            <paper-spinner-lite [active]="updateInProgress"></paper-spinner-lite>
         </div>
     </div>
 </div>

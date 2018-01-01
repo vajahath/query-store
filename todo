@@ -1,7 +1,7 @@
 - [x] trim large queries in viewer
 - [x] add spinner
 - [x] cancel buttn in editor/esc to cancel
-- [ ] spinner in updater
+- [x] spinner in updater
 - [ ] create-query component
 - [ ] failure case
 - [ ] pagination
