@@ -1,27 +1,19 @@
-# Mig
+# Query Store
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
+A UI-Interface built in Angular for selectively issuing SQL queries to multiple deployment environments. This tool consumes some apis that you may have to write as your own. You don't have to use this package if you are using NoSQL.
 
-## Development server
+_Good docs will be provided when it enters beta_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Please avoid using SQL DBs. They're done
 
-## Code scaffolding
+When comes to modern workflows like CI/CD etc., SQL DBS is a pain.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> I'm working on this package against my will. I'm in such a situation. I don't want to waste my precious time on this crap (neither should you) hence I payed little attention to styles. Most of the issues this tool gonna address had already solved by NoSQL's Dynamic Schema feature.
 
-## Build
+This is an escape hatch. If you've an option, use a DB that supports Dynamic Schema and thus **please avoid using this package**.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+> SQL is invented in 70s, It's time to [upgrade](https://www.mongodb.com/).
 
-## Running unit tests
+# Licence
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+MIT &copy; [Vajahath Ahmed](https://twitter.com/vahatth7)
