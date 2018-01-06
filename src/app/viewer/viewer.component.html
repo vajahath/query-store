@@ -37,7 +37,7 @@
                 <td>{{query.created_by}}</td>
                 <td>
                     <paper-spinner-lite [active]="query.finishedInProgress"></paper-spinner-lite>
-                    <input type="checkbox" [(ngModel)]="query.finished" (change)="updateCheckBox(i, query.id, 'finished', query.finished)" [disabled]="query.finishedInProgress">
+                    <input type="checkbox" [(ngModel)]="query.finished" (change)="updateCheckBox(i, query.id, 'finished', query.finished)" [disabled]="query.finishedInProgress && query.editable">
                 </td>
 
                 <!-- vaju -->

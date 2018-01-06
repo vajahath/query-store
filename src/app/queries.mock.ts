@@ -9,6 +9,8 @@ export const QUERIES: Query[] = [
     created_at: '31/12/2017 11:50pm',
     finished: true,
 
+    editable: true,
+
     ready_for_vajahath: true,
     vajahath_status: 'pending',
 
@@ -31,6 +33,8 @@ export const QUERIES: Query[] = [
     created_by: 'vajahath',
     created_at: '31/12/2017 11:50pm',
     finished: true,
+
+    editable: false,
 
     ready_for_vajahath: true,
     vajahath_status: 'pending',
@@ -55,6 +59,8 @@ export const QUERIES: Query[] = [
     created_by: 'vajahath',
     finished: true,
 
+    editable: true,
+
     ready_for_vajahath: true,
     vajahath_status: 'pending',
 
@@ -78,6 +84,8 @@ export const QUERIES: Query[] = [
     created_by: 'vajahath',
     finished: true,
 
+    editable: true,
+
     ready_for_vajahath: true,
     vajahath_status: 'pending',
 
@@ -100,6 +108,8 @@ export const QUERIES: Query[] = [
     created_at: '31/12/2017 11:50pm',
     created_by: 'vajahath',
     finished: true,
+
+    editable: true,
 
     ready_for_vajahath: true,
     vajahath_status: 'pending',

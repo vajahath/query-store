@@ -8,6 +8,8 @@ export class Query {
   finished: boolean;
   finishedInProgress?: boolean;
 
+  editable: boolean;
+
   ready_for_vajahath: boolean;
   vajahath_status: 'passed' | 'pending' | 'failed' | 'inactive';
   ready_for_vajahathInProgress?: boolean;
