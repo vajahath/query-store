@@ -11,12 +11,6 @@ export const QUERIES: Query[] = [
 
     editable: true,
 
-    ready_for_vajahath: true,
-    vajahath_status: 'pending',
-
-    ready_for_nithin: false,
-    nithin_status: 'pending',
-
     ready_for_local: false,
     local_status: 'pending',
 
@@ -35,12 +29,6 @@ export const QUERIES: Query[] = [
     finished: true,
 
     editable: false,
-
-    ready_for_vajahath: true,
-    vajahath_status: 'pending',
-
-    ready_for_nithin: false,
-    nithin_status: 'pending',
 
     ready_for_local: false,
     local_status: 'pending',
@@ -61,12 +49,6 @@ export const QUERIES: Query[] = [
 
     editable: true,
 
-    ready_for_vajahath: true,
-    vajahath_status: 'pending',
-
-    ready_for_nithin: false,
-    nithin_status: 'pending',
-
     ready_for_local: false,
     local_status: 'pending',
 
@@ -86,12 +68,6 @@ export const QUERIES: Query[] = [
 
     editable: true,
 
-    ready_for_vajahath: true,
-    vajahath_status: 'pending',
-
-    ready_for_nithin: false,
-    nithin_status: 'pending',
-
     ready_for_local: false,
     local_status: 'pending',
 
@@ -110,12 +86,6 @@ export const QUERIES: Query[] = [
     finished: true,
 
     editable: true,
-
-    ready_for_vajahath: true,
-    vajahath_status: 'pending',
-
-    ready_for_nithin: false,
-    nithin_status: 'pending',
 
     ready_for_local: false,
     local_status: 'pending',

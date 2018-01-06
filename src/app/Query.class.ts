@@ -10,14 +10,6 @@ export class Query {
 
   editable: boolean;
 
-  ready_for_vajahath: boolean;
-  vajahath_status: 'passed' | 'pending' | 'failed' | 'inactive';
-  ready_for_vajahathInProgress?: boolean;
-
-  ready_for_nithin: boolean;
-  nithin_status: 'passed' | 'pending' | 'failed' | 'inactive';
-  ready_for_nithinInProgress?: boolean;
-
   ready_for_local: boolean;
   local_status: 'passed' | 'pending' | 'failed' | 'inactive';
   ready_for_localInProgress?: boolean;

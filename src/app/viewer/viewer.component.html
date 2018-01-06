@@ -15,8 +15,6 @@
             <th>created by</th>
             <th>finished</th>
 
-            <th>vaju</th>
-            <th>nithin</th>
             <th>local</th>
             <th>staging</th>
             <th>production</th>
@@ -38,20 +36,6 @@
                 <td>
                     <paper-spinner-lite [active]="query.finishedInProgress"></paper-spinner-lite>
                     <input type="checkbox" [(ngModel)]="query.finished" (change)="updateCheckBox(i, query.id, 'finished', query.finished)" [disabled]="query.finishedInProgress && query.editable">
-                </td>
-
-                <!-- vaju -->
-                <td>
-                    <paper-spinner-lite [active]="query.ready_for_vajahathInProgress"></paper-spinner-lite>
-                    <input type="checkbox" [(ngModel)]="query.ready_for_vajahath" (change)="updateCheckBox(i, query.id, 'ready_for_vajahath', query.ready_for_vajahath)"
-                        [disabled]="query.ready_for_vajahathInProgress"> {{query.vajahath_status}}
-                </td>
-
-                <!-- nithin -->
-                <td>
-                    <paper-spinner-lite [active]="query.ready_for_nithinInProgress"></paper-spinner-lite>
-                    <input type="checkbox" [(ngModel)]="query.ready_for_nithin" (change)="updateCheckBox(i, query.id, 'ready_for_nithin', query.ready_for_nithin)"
-                        [disabled]="query.ready_for_nithinInProgress"> {{query.nithin_status}}
                 </td>
 
                 <!-- local -->
