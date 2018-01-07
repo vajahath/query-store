@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+footer {
+  background-color: azure;
+  color: rgb(112, 139, 139);
+  padding: 1%;
+  border-top: thin solid rgb(215, 235, 235);
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: rgb(49, 95, 225);
+}
+a:hover,
+a:active {
+  text-decoration: underline;
+  color: rgb(49, 95, 225);
+}
