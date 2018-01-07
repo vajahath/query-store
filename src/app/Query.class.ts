@@ -21,4 +21,7 @@ export class Query {
   ready_for_production: boolean;
   production_status: 'passed' | 'pending' | 'failed' | 'inactive';
   ready_for_productionInProgress?: boolean;
+
+  archive: boolean;
+  archiveInProgress?: boolean;
 }

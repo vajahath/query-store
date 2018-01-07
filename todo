@@ -4,12 +4,14 @@
 - [x] spinner in updater
 - [x] create-query component
 - [x] footer
-- [ ] prevent editing
-- [ ] delete query
-- [ ] failure case
+- [x] archive
+- [x] restore
+- [ ] ajax reqst
 - [ ] pagination
 - [ ] credential page
-- [ ] ajax reqst
 - [ ] better table design
 - [ ] paper checkbox
 - [ ] separate page for query
+- [ ] failure case
+- [-] delete query - skipped
+- [-] prevent editing - skipped

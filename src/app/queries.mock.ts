@@ -18,7 +18,9 @@ export const QUERIES: Query[] = [
     staging_status: 'pending',
 
     ready_for_production: false,
-    production_status: 'failed'
+    production_status: 'failed',
+
+    archive: true
   },
   {
     id: 2,
@@ -37,7 +39,9 @@ export const QUERIES: Query[] = [
     staging_status: 'pending',
 
     ready_for_production: false,
-    production_status: 'failed'
+    production_status: 'failed',
+
+    archive: true
   },
   {
     id: 3,
@@ -56,7 +60,9 @@ export const QUERIES: Query[] = [
     staging_status: 'pending',
 
     ready_for_production: false,
-    production_status: 'failed'
+    production_status: 'failed',
+
+    archive: false
   },
   {
     id: 4,
@@ -75,7 +81,9 @@ export const QUERIES: Query[] = [
     staging_status: 'pending',
 
     ready_for_production: false,
-    production_status: 'failed'
+    production_status: 'failed',
+
+    archive: true
   },
   {
     id: 5,
@@ -94,6 +102,8 @@ export const QUERIES: Query[] = [
     staging_status: 'pending',
 
     ready_for_production: false,
-    production_status: 'failed'
+    production_status: 'failed',
+
+    archive: false
   }
 ];

@@ -48,4 +48,29 @@ export class AppViewerComponent implements OnInit {
       this.queries[index][`${property}InProgress`] = false;
     }, 5000);
   }
+
+  archive(index: number, qId: number) {
+    if (this.queries[index][`archiveInProgress`]) {
+      return;
+    }
+    this.queries[index][`archiveInProgress`] = true;
+
+    console.log(`pos ${index} with id ${qId} has archived`);
+    setTimeout(() => {
+      this.queries[index][`archive`] = true;
+      this.queries[index][`archiveInProgress`] = false;
+    }, 2000);
+  }
+  restore(index: number, qId: number) {
+    if (this.queries[index][`archiveInProgress`]) {
+      return;
+    }
+    this.queries[index][`archiveInProgress`] = true;
+
+    console.log(`pos ${index} with id ${qId} has restored`);
+    setTimeout(() => {
+      this.queries[index][`archive`] = false;
+      this.queries[index][`archiveInProgress`] = false;
+    }, 2000);
+  }
 }
