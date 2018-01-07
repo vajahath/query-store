@@ -14,6 +14,7 @@ import { QueryService } from './query.service';
 import { AuthService } from './auth.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { QueriesComponent } from './queries/queries.component';
+import { DeploymentsComponent } from './deployments/deployments.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { QueriesComponent } from './queries/queries.component';
     AppViewerComponent,
     AppCreateComponent,
     AppEditorComponent,
-    QueriesComponent
+    QueriesComponent,
+    DeploymentsComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [QueryService, AuthService],
