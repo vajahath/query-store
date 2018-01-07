@@ -5,11 +5,17 @@
 .left {
   display: inline-block;
 }
-/* .right {
+.right {
   display: inline-block;
   position: absolute;
   margin-left: 10px;
-} */
+}
 .title-input {
   width: 300px;
+}
+.deployment-section {
+  margin-left: 150px;
+  padding: 21px;
+  background-color: azure;
+  border: thin solid #acd6d6;
 }

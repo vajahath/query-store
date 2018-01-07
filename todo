@@ -6,7 +6,8 @@
 - [x] footer
 - [x] archive
 - [x] restore
-- [ ] credential page
+- [x] credential page
+- [ ] basic routing
 - [ ] ajax reqst
 - [ ] pagination
 - [ ] better table design
