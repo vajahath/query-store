@@ -13,13 +13,15 @@ import { AppEditorComponent } from './editor/editor.component';
 import { QueryService } from './query.service';
 import { AuthService } from './auth.service';
 import { AppRoutingModule } from './/app-routing.module';
+import { QueriesComponent } from './queries/queries.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppViewerComponent,
     AppCreateComponent,
-    AppEditorComponent
+    AppEditorComponent,
+    QueriesComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [QueryService, AuthService],

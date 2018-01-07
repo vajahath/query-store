@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppCreateComponent } from './create/create.component';
+import { QueriesComponent } from './queries/queries.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/queries', pathMatch: 'full' },
-  { path: 'queries', component: AppCreateComponent }
+  { path: 'queries', component: QueriesComponent }
 ];
 
 @NgModule({
