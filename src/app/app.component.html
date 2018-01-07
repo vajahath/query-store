@@ -1,2 +1,13 @@
+<div class="flex-container">
+    <div>
+        <h2 style="color:#4caf50">Query Store</h2>
+    </div>
+    <div>
+        <input [(ngModel)]="username" type="text" placeholder="username">
+        <input [(ngModel)]="password" type="password" placeholder="password">
+        <button (click)="setCredentials()">set</button>
+    </div>
+</div>
+
 <app-create></app-create>
 <app-viewer></app-viewer>

@@ -11,6 +11,7 @@ import { AppEditorComponent } from './editor/editor.component';
 
 // services
 import { QueryService } from './query.service';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { QueryService } from './query.service';
     AppEditorComponent
   ],
   imports: [BrowserModule, FormsModule],
-  providers: [QueryService],
+  providers: [QueryService, AuthService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
