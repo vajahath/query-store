@@ -9,6 +9,9 @@ import { AppViewerComponent } from './viewer/viewer.component';
 import { AppCreateComponent } from './create/create.component';
 import { AppEditorComponent } from './editor/editor.component';
 
+// services
+import { QueryService } from './query.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +20,7 @@ import { AppEditorComponent } from './editor/editor.component';
     AppEditorComponent
   ],
   imports: [BrowserModule, FormsModule],
-  providers: [],
+  providers: [QueryService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

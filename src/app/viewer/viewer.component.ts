@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Query } from '../Query.class';
 import { EditorComponentResponse } from '../editor/editor.component';
 
-import { QUERIES } from '../queries.mock';
+import { QueryService } from '../query.service';
 
 @Component({
   selector: 'app-viewer',
@@ -11,15 +11,22 @@ import { QUERIES } from '../queries.mock';
   styleUrls: ['./viewer.component.css']
 })
 export class AppViewerComponent implements OnInit {
-  queries = QUERIES;
+  queries: Query[];
 
   selectedQuery: Query;
   selectedQueryCopy: Query;
   selectedQueryIndex: number;
 
-  constructor() {}
-  ngOnInit() {}
+  constructor(private queryService: QueryService) {}
+  ngOnInit() {
+    this.getQueries();
+  }
 
+  getQueries(): void {
+    this.queryService
+      .getQueries()
+      .subscribe(queries => (this.queries = queries));
+  }
   onEditClick(query: Query, index: number) {
     this.selectedQuery = query;
     this.selectedQueryCopy = Object.assign({}, this.selectedQuery);
