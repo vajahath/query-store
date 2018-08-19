@@ -1,6 +1,4 @@
-# Query Store
-
-> Under development :syringe:
+# Query Store [Deprecated] :warning:
 
 A UI-Interface built in Angular for selectively issuing SQL queries to multiple deployment environments. This tool consumes some apis that you may have to write as your own. You don't have to use this package if you are using NoSQL.
 
